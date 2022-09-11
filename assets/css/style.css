@@ -1,4 +1,4 @@
-var h1El = document.createElement("h1");
-
-
-h1El.textContent = "Coding Quiz Challenge";
+body {
+    display: flex;
+    flex-direction: column;
+  }
