@@ -60,3 +60,8 @@ input {
   margin: 0 auto;
   width: 480px;
 }
+
+#countdown {
+  text-align: right;
+  margin-right: 16px;
+}

@@ -14,12 +14,10 @@
 
 * Notes were applied to the HTML code, CSS and JavaScript code to identify each section of code. 
 
-<!-- * When the password generator button is selected a series of alerts and prompts open to define what the password will contain.  The initial alert asks the user how many characters they would like the password to contain.  After the alert are a series of prompts.  The first prompt asks the user to confirm if they want the password to include special characters.  The next prompt asks the user if they want the password to include numeric characters.  The next prompt asks the user if they want the password to include lowercase characters.  The final prompt ask the user if they want the password to include uppercase characters.  After all prompts are selected a password is generated based on criteria the user entered. -->
-
 
 ## Installation
 
-<!-- * The project is currently running on Github server.  It can be viewed at: https://c-alanwill.github.io/Javascript-password-generator/ -->
+* The project is currently running on Github server.  It can be viewed at: https://c-alanwill.github.io/coding-quiz/
 
 The code for this project can be found on GitHub at: https://github.com/c-alanwill/coding-quiz
 
