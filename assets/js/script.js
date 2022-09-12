@@ -1,9 +1,6 @@
 // Variables
 var body = document.body;
-var h1El = document.createElement("h1");
-var directionsEl = document.createElement("div");
 var startEl = document.getElementById("start-button");
-
 var timerEl = document.getElementById('countdown');
 
 // Timer that counts down from 75
@@ -23,17 +20,33 @@ function countdown() {
       timerEl.textContent = '';
       // Use `clearInterval()` to stop the timer
       clearInterval(timeInterval);
-      // Call the `displayMessage()` function
-      displayMessage();
     }
   }, 1000);
 }
 
 // Call Functions
-startEl.addEventListener("click", countdown())
+startEl.addEventListener("click", countdown)
 countdown();
 
 // First list of questions
+
+
+
+
+// Create ordered list element for questions.
+
+// Clicking on start button on first page.
+
+// Start timer
+
+// Advance to next page if user gets question correct.
+
+// Time is subtracted from timer if user gets question wrong.
+
+// When timer reachs 0 quiz is over and user saves initils and sees score.
+
+
+// // First list of questions
 
 
 
