@@ -48,14 +48,6 @@ var userChoices = document.getElementById('question');
 //   }
 // }
 
-// onClickEvent on start quiz button
-// when clicked timer should start.
-// take previously constructed elements and edit them.
-// display questions and answers choices.
-
-// click on button for answer.  If correct, tell user that it is correct.  If incorrect tell user.  Show next question.
-
-
 
 
 // Timer that counts down from 75
@@ -87,38 +79,18 @@ function countdown() {
 // Call Functions
 startEl.addEventListener("click", countdown)
 
+// onClickEvent on start quiz button
+// when clicked timer should start.
+// take previously constructed elements and edit them.
+
+// click on button for answer.  If correct, tell user that it is correct.  If incorrect tell user.  Show next question.
+
 // First list of questions
 
-
-
-
 // Create ordered list element for questions.
-
-// Clicking on start button on first page.
-
-// Start timer
 
 // Advance to next page if user gets question correct.
 
 // Time is subtracted from timer if user gets question wrong.
 
 // When timer reachs 0 quiz is over and user saves initils and sees score.
-
-
-// // First list of questions
-
-
-
-
-// Create ordered list element for questions.
-
-// Clicking on start button on first page.
-
-// Start timer
-
-// Advance to next page if user gets question correct.
-
-// Time is subtracted from timer if user gets question wrong.
-
-// When timer reachs 0 quiz is over and user saves initils and sees score.
-
