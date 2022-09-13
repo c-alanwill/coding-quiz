@@ -79,15 +79,17 @@ function countdown() {
 // Call Functions
 startEl.addEventListener("click", countdown)
 
+// PSEUDO CODE
+
+// Show first page.
+
 // onClickEvent on start quiz button
-// when clicked timer should start.
-// take previously constructed elements and edit them.
+
+// when start quiz button is clicked timer should start.
+
+// First list of questions.  Create ordered list element for questions.
 
 // click on button for answer.  If correct, tell user that it is correct.  If incorrect tell user.  Show next question.
-
-// First list of questions
-
-// Create ordered list element for questions.
 
 // Advance to next page if user gets question correct.
 
