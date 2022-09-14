@@ -27,7 +27,7 @@ The code used on this page is HTML, CSS and Javascript.  There is an index.html 
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Quiz Page](./Assets/04-web-api.png)
+![Quiz Page](./assets/04-web-api.png)
 
 ## Credits
 
