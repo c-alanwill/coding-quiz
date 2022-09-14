@@ -8,15 +8,22 @@ var allDoneEl = document.querySelector('#all-done');
 var highScoreEl = document.querySelector('#high-score');
 var userChoices = document.getElementById('answers');
 var feedbackEl = document.getElementById('feedback');
+var titleQuestionEl = document.getElementById('title-question');
+var submitEl = document.getElementById('submit');
 
-var timeLeft = 75;
+var timeLeft = 60;
 var timeInterval;
 var currentQuestionIndex = 0;
 
 var questions = [
 	{
 		question: 'Commonly used data types DO NOT Include: ____________.',
-		choices: ['1. strings', '2. booleans', '3. alerts', '4. numbers'],
+		choices: [
+      '1. strings', 
+      '2. booleans', 
+      '3. alerts', 
+      '4. numbers'
+		],
 		answer: 2,
 	},
 	{
@@ -43,7 +50,12 @@ var questions = [
 	{
 		question:
 			'String values must be enclosed within ________ when being assigned to variables.',
-		choices: ['1. commas', '2. curly brackets', '3. quotes', '4. parenthesis'],
+		choices: [
+      '1. commas', 
+      '2. curly brackets', 
+      '3. quotes', 
+      '4. parenthesis'
+		],
 		answer: 3,
 	},
 	{
@@ -59,7 +71,7 @@ var questions = [
 	},
 ];
 
-// Timer that counts down from 75
+// Timer that counts down from 60
 function countdown() {
 	timeInterval = setInterval(function () {
 		// As long as the `timeLeft` is greater than 1
@@ -134,8 +146,18 @@ function checkAnswer(event) {
 }
 
 function endGame() {
-	alert('All Done!');
+	// alert('All Done!');
+  titleQuestionEl.innerHTML = '';
+  userChoices.innerHTML = '';
+  allDoneEl.classList.add("hidden");
+  allDoneEl.classList.remove("hidden");
 }
+
+submitEl.addEventListener('click', function () {
+  allDoneEl.innerHTML = '';
+  highScoreEl.classList.add("hidden");
+  highScoreEl.classList.remove("hidden");
+});
 
 // Call Functions
 startEl.addEventListener('click', function () {
@@ -146,3 +168,4 @@ startEl.addEventListener('click', function () {
 });
 
 userChoices.addEventListener('click', checkAnswer);
+

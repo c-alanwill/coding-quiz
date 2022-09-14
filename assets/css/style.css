@@ -47,6 +47,33 @@ border: none;
 text-align: left;
 }
 
+#submit {
+  width: 130px;
+  height: 30px;
+  background-color: purple;
+  margin: auto;
+  margin-top: 32px;
+  color: white;
+  font-size: 15px;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  }
+
+  #go-back, #clear {
+    width: 160px;
+    height: 30px;
+    background-color: purple;
+    margin: auto;
+    margin-top: 32px;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+  }
+
+
 .hidden {
 display: none;
 }
@@ -56,13 +83,13 @@ h2 {
   font-size: 23px;
   margin: 0 auto;
   width: 460px;
-  margin-bottom: 40px;
   text-align: left; 
 }
 
 #answers {
   margin: 0 auto;
-  width: 460px;
+  width: 480px;
+  margin-top: 40px;
 }
 
 #question, .feedback {
@@ -78,7 +105,7 @@ input {
   height: 23px;
 }
 
-#all-done {
+#all-done, h2 {
   text-align: left;
   margin: 0 auto;
   width: 480px;
@@ -93,4 +120,9 @@ input {
 #countdown {
   text-align: right;
   margin-right: 16px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: -5px;
 }

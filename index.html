@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
 	<body>
+        <!-- quiz start page -->
 		<div class="container" id="page-one">
 			<h1>Coding Quiz Challenge</h1>
 			<p>
@@ -17,22 +18,26 @@
 			</p>
 			<button id="start-button">Start Quiz</button>
 		</div>
+        <!-- quiz content -->
 		<div id="countdown"></div>
 		<div class="hidden" id="question">
 			<h2 id="title-question"></h2>
 			<div id="answers"></div>
-			<div id="feedback" class="feedback hidden"></div>
+                <div id="feedback" class="feedback hidden"></div>
+            <!-- quiz complete -->
 			<div class="hidden" id="all-done">
 				<h2>All Done!</h2>
-				<p id="final-score">Your final score is</p>
+				<p id="final-score">Your final score is:</p>
 				<label>Enter Initials</label>
 				<input type="text" id="initial" />
 				<button id="submit">Submit</button>
 			</div>
+            <!-- quiz score -->
 			<div class="hidden" id="high-score">
 				<h2>Highscores</h2>
-				<ol id="scores">
-					<li>AB-22</li>
+                <h3>22</h3>
+				<!-- <ol id="scores">
+					<li>22</li> -->
 				</ol>
 				<button id="go-back">Go Back</button>
 				<button id="clear">Clear Highscores</button>
