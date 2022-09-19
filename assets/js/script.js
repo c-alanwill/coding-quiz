@@ -10,6 +10,12 @@ var userChoices = document.getElementById('answers');
 var feedbackEl = document.getElementById('feedback');
 var titleQuestionEl = document.getElementById('title-question');
 var submitEl = document.getElementById('submit');
+var finalScore = document.getElementById('final-score');
+var userScores = []
+var initialEl = document.getElementById('initial');
+var scores = document.getElementById('scores');
+var goBack = document.getElementById('go-back');
+var clear = document.getElementById('clear');
 
 var timeLeft = 60;
 var timeInterval;
@@ -121,7 +127,6 @@ function checkAnswer(event) {
 		if (timeLeft < 0) {
 			timeLeft = 0;
 		}
-
 		// display 'Wrong Answer'
 		feedbackEl.textContent = 'Wrong Answer!';
 	} else {
@@ -151,13 +156,39 @@ function endGame() {
   userChoices.innerHTML = '';
   allDoneEl.classList.add("hidden");
   allDoneEl.classList.remove("hidden");
+  finalScore.textContent="Your final score is: " + ++timeLeft;
 }
 
 submitEl.addEventListener('click', function () {
   allDoneEl.innerHTML = '';
   highScoreEl.classList.add("hidden");
   highScoreEl.classList.remove("hidden");
+  var initialScore = initialEl.value + " - " + timeLeft;
+  userScores.push(initialScore);
+  localStorage.setItem("initialScore", JSON.stringify (userScores));
+  displayScores ();
 });
+
+function displayScores () {
+  var data=localStorage.getItem("initialScore");
+  if (data) {
+    userScores = JSON.parse(data);
+    scores.textContent = "";
+    for (var i = 0; i < userScores.length; i++) {
+      scores.innerHTML = scores.innerHTML + `<li>${userScores[i]} </li>`
+    }
+  }
+}
+displayScores()
+
+goBack.addEventListener('click', function () {
+  location.reload ();
+})
+
+clear.addEventListener('click', function () {
+  localStorage.clear (); 
+  scores.innerHTML = "";
+})
 
 // Call Functions
 startEl.addEventListener('click', function () {
@@ -168,4 +199,21 @@ startEl.addEventListener('click', function () {
 });
 
 userChoices.addEventListener('click', checkAnswer);
+
+
+// Do a hover and click state for all buttons.
+// either don't display score to last question or display and hold on screen for a couple of seconds before changing page.
+// calculate and add final score on all done page. 1 to 4.  Do I add each score to local memory?
+
+// maybe you hold the score after each question, but you hide it until the time you want to show it.  See Activity 12 in Web API.
+// so do an event listener with a count for tally in a function.
+// var scores = 0 or would this be var li since it's calling the number inside the li?
+// if correct: count++,  if incorrect answer: count--
+// do you add the function to line 169?
+
+// submit on click will store my score with initials to local memory.
+
+// on Highscores page, display initials next to score and have a list for each time the game is played.
+// selecting back returns to beginning.
+// Clear Highscores removes scores out of local memory and returns to beginning.
 
